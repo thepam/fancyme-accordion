@@ -1,0 +1,215 @@
+<!-- FancyMe Accordion Plugin
+ * By Pamela Rodriguez
+ * Free to use
+ * Link backs are appreciated :)
+ * www.thepamrdz.com
+ *-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>FancyMe Accordion Demo</title>
+<link rel="stylesheet" type="text/css" href="demo.styles.css"/>
+<link rel="stylesheet" type="text/css" href="../fancymeaccordion.css"/>
+<link rel="stylesheet" type="text/css" href="jquery.snippet.bright.css"/>
+<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="jquery.snippet.min.js"></script>
+<script type="text/javascript" src="../fancymeaccordion.jQuery.js"></script>
+<script>
+ $(function() {
+   $('.accordion01').fancymeaccordion();
+   $('.accordion02').fancymeaccordion({theme:"pink",speed:"slow"});
+   $('.accordion03').fancymeaccordion({theme:"green",speed:"fast",actives:"one"});
+   $("pre.htmlCode").snippet("html",{style:"bright",collapse:true});
+   $("pre.jsCode").snippet("javascript",{style:"bright"});
+ });
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+    <p class="center"></p>
+    <h1>Example 1: Default settings</h1>
+	<div class="example">
+        <div class="accordion01">
+            <h1>Menu</h1>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2 class="active">Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a class="active" href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="explain">
+        <p>First, you need to import the jQuery library, the FancyMe Accordion plugin, and the accordion CSS</p>
+        <pre class="htmlCode">
+&lt;link rel="stylesheet" type="text/css" href="fancymeaccordion.css"/&gt;
+&lt;script type="text/javascript" src="jquery-1.9.0.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="fancymeaccordion.jQuery.js"&gt;&lt;/script&gt;
+        </pre>
+        <p>The HTML needed to structure our simple accordion is nothing more than lists with corresponding H2 headers, and a global H1 header, wrapped into a DIV like shown in the next block of code. A class ACTIVE has been added to both the H2 and the list element LI that mark the selected or active item of the menu</p>
+        <pre class="htmlCode">
+&lt;div class="accordion"&gt;
+    &lt;h1&gt;Menu&lt;/h1&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2 class="active"&gt;Title&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="active" href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Something&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+        </pre>
+        <p>Lastly, inside a SCRIPT tag in the HEAD of your page, you reference the wrapping DIV and bind it to the accordion plugin</p>
+        <pre class="jsCode">
+&lt;script&gt;
+$(function() {
+    $('.accordion').fancymeaccordion();
+});
+&lt;/script&gt;
+        </pre>
+        <p>This brings the default view of the accordion which includes:</p>
+        <ul>
+            <li>Blue CSS theme</li>
+            <li>Fast collapsing and opening animation</li>
+            <li>All menu items can be open at once</li>
+        </ul>
+    </div>
+</div>
+<div class="wrapper">
+    <h1>Example 2: Changing themes and speed</h1>
+    <div class="example">
+        <div class="accordion02">
+            <h1>Menu</h1>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2 class="active">Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a class="active" href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div class="explain">
+        <p>In this example, the HTML is exactly the same, and the imports have been made, but some parameters have been added to the JQuery function</p>
+        <pre class="jsCode">
+&lt;script&gt;
+$(function() {
+    $('.accordion').fancymeaccordion({theme:"pink",speed:"slow"});
+});
+&lt;/script&gt;
+        </pre>
+        <p>The first new parameter we added is THEME. Fancyme plugins have the following themes available (which are the possible values for the parameter):</p>
+        <ul>
+            <li>blue (default for this plugin)</li>
+            <li>red</li>
+            <li>pink</li>
+            <li>green</li>
+            <li>yellow</li>
+            <li>orange</li>
+            <li>purple</li>
+            <li>black</li>
+        </ul>
+        <p>The CSS file is easily structured for the developer to change colors used in these themes.</p>
+        <p>The next parameter is SPEED, and its default value is <strong>"fast"</strong>. By adding <strong>speed: "slow"</strong>, we get the effect shown to the left.</p>
+    </div>
+</div>
+<div class="wrapper">
+    <h1>Example 3: Limiting active elements</h1>
+    <div class="example">
+        <div class="accordion03">
+            <h1>Menu</h1>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2 class="active">Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a class="active" href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+            <h2>Title</h2>
+            <ul>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+                <li><a href="">Something</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="explain">
+        <p>The last parameter to explain is the ACTIVES parameter, which has a default value of <strong>actives: "all"</strong>. Look at the following code (JQuery function for adding the plugin)</p>
+                <pre class="jsCode">
+&lt;script&gt;
+$(function() {
+    $('.accordion').fancymeaccordion({theme:"green",actives:"one"});
+});
+&lt;/script&gt;
+        </pre>
+        <p>This results in the menu shown to the left, and if you click through its main options, you will see that as soon as a submenu opens, the one that was previously open immediately collapses. This is achieved through the <strong>actives: "one"</strong> parameter specification.</p>
+    </div>
+</div>
+</body>
+</html>

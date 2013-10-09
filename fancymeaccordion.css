@@ -1,0 +1,131 @@
+/* FancyMe Accordion Plugin
+ * By Pamela Rodriguez
+ * Free to use
+ * Link backs are appreciated :)
+ * www.thepamrdz.com
+ */
+
+/*Plugin CSS - Basic styling*/
+
+.fancyme-accordion{
+	width: auto;
+	height: auto;
+	background-color: #eeeeee;	
+	min-width: 200px;
+}
+
+.fancyme-accordion h1, .fancyme-accordion h2, .fancyme-accordion ul, .fancyme-accordion li{
+	margin: 0;
+	padding: 0;	
+	list-style: none;
+	font-weight:100;
+}
+
+.fancyme-accordion h1{
+	font-size: 21px;
+	padding: 15px 12px;	
+}
+
+.fancyme-accordion h2{
+	cursor: pointer;
+	font-size: 18px;
+	padding: 12px;
+	background: url(arrowdown.png) no-repeat right center;	
+}
+
+.fancyme-accordion h2.active{
+	background: url(arrowup.png) no-repeat right center;	
+}
+
+.fancyme-accordion ul li a{
+	padding: 12px 20px;
+	display: block;
+	text-decoration: none;	
+	color: #333;
+}
+
+.fancyme-accordion ul li a:hover, .fancyme-accordion ul li a.active{
+	background-color: #ddd;
+}
+
+/*Plugin CSS - Themes*/
+
+.fancyme-accordion.blue h1{
+	background-color: #25325a;
+	color: #eee;	
+}
+
+.fancyme-accordion.blue h2{
+	background-color: #374c85;
+	color: #eee;	
+}
+
+.fancyme-accordion.red h1{
+	background-color: #5f0100;
+	color: #eee;	
+}
+
+.fancyme-accordion.red h2{
+	background-color: #921307;
+	color: #eee;	
+}
+
+.fancyme-accordion.green h1{
+	background-color: #084c24;
+	color: #eee;	
+}
+
+.fancyme-accordion.green h2{
+	background-color: #1c7f2c;
+	color: #eee;	
+}
+
+.fancyme-accordion.yellow h1{
+	background-color: #ffbf00;
+	color: #fff;	
+}
+
+.fancyme-accordion.yellow h2{
+	background-color: #ffde00;
+	color: #fff;	
+}
+
+.fancyme-accordion.orange h1{
+	background-color: #d85200;
+	color: #fff;	
+}
+
+.fancyme-accordion.orange h2{
+	background-color: #ee8a00;
+	color: #fff;	
+}
+
+.fancyme-accordion.pink h1{
+	background-color: #891d59;
+	color: #eee;	
+}
+
+.fancyme-accordion.pink h2{
+	background-color: #9d4978;
+	color: #eee;	
+}
+
+.fancyme-accordion.purple h1{
+	background-color: #351662;
+	color: #eee;	
+}
+
+.fancyme-accordion.purple h2{
+	background-color: #7a52b1;
+	color: #eee;	
+}
+
+.fancyme-accordion.black h1{
+	background-color: #141414;
+	color: #eee;	
+}
+
+.fancyme-accordion.black h2{
+	background-color: #333333;
+	color: #eee;	
+}
